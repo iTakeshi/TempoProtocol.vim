@@ -71,6 +71,19 @@ syn match   TempoProtocolComment /\/\/.*$/ contains=TempoProtocolToDo
 " ToDo
 syn keyword TempoProtocolTodo TODO NOTE FIXME XXX contained
 
+" Functions
+let s:function_dict = globpath(&runtimepath, 'dict/TempoProtocol/functions.dict', 1)
+for line in readfile(s:function_dict)
+  let list = split(line, '\t', 1)
+  if len(list) >= 1
+    let function_name = list[0]
+  else
+    continue
+  endif
+  let com = printf('syn keyword TempoProtocolFunction %s', function_name)
+  execute com
+endfor
+
 " Define the default highlighting.
 " For version 5.7 and earlier: only when not done already
 " For version 5.8 and later: only when an item doesn't have highlighting yet
@@ -110,6 +123,7 @@ if version >= 508 || !exists("did_ecell_model_syntax_inits")
   HiLink TempoProtocolSemicolon         SpecialChar
   HiLink TempoProtocolComment           Comment
   HiLink TempoProtocolTODO              TODO
+  HiLink TempoProtocolFunction          Function
 
   delcommand HiLink
 endif
