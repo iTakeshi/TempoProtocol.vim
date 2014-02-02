@@ -1,126 +1,126 @@
-print
-printf
-write
-writef
-mio_dig_get
-mio_dig_set
-mio_ao_set
-mio_fout
-poisson
-random
-normal
-seed1
-seed2
-sign
-abs
-status_set
-cancel_set
-status_clr
-cancel_clr
-htb_sweep
-htb_sweeps
-htb_period
-htb_extension
-htb_cancel
-htb_offset
-htb_tpb
-htb_nchannels
-htb_channel
-htb_type
-htb_tag
-htb_handle
-htb_speed
-htb_speedunits
-htb_dirty
-system
-systemf
-tick
-time
-timeus
-mspertick
-mspercycle
-timeofday
-day
-dayofweek
-month
-year
-atable
-ctable
-etable
-atable_set
-ctable_set
-etable_set
-event_set
-event_get
-inp
-inpw
-outp
-outpw
-sound
-send
-sendf
-com_autocancel
-com_count
-com_free_space
-com_peek
-com_get
-com_getn
-com_flush
-com_span
-send2
-sendf2
-com_autocancel2
-com_count2
-com_free_space2
-com_peek2
-com_get2
-com_getn2
-com_flush2
-com_span2
-sendb
-sendfb
-getPendingDBTriggers
-getPendingTAGTriggers
-getProcessState
-getSystemInfo
-oCreate
-oDestroy
-oMove
-oSetAttribute
-oSetGraph
-mouGetX
-mouGetY
-mouGetButtons
-mouSetMickeys
-mouSetXY
-fabs
-sin
-cos
-sinrad
-cosrad
-deg2rad
-rad2deg
-sqrt
-round
-ceil
-floor
-floatimport
-floatexport
-floattest
-tio_fout
-tio_dig_mask
-tio_dig_get
-tio_dig_set
-dioSetMode
-dioGetA
-dioGetB
-dioGetC
-dioSetA
-dioSetB
-dioSetC
-dSend
-dSendf
-dSend2
-dSendf2
-dacGet
-dacSet
+print	Float/Integer  	Display string in message window
+printf	Float/Integer  	Formatted print
+write	Float/Integer  	Write text to a file
+writef	Float/Integer  	Write formatted text to a file
+mio_dig_get	Integer/Integer	Digital input
+mio_dig_set	Integer/Integer	Digital output
+mio_ao_set	Integer/Integer	Analog output
+mio_fout	Integer/Integer	Frequency output
+poisson	Integer/Integer	Synonym for ipproc
+random	Integer/Integer	Synonym for iunif
+normal	Integer/Integer	Normal random number
+seed1	Integer/Integer	Get/Set seed1 for random numbers
+seed2	Integer/Integer	Get/Set seed2 for random numbers
+sign	Float/Integer  	Signum function
+abs	Integer/Integer	Integer absolute value
+status_set	Integer/Integer	Request status bits to be set
+cancel_set	Integer/Integer	Request cancel bits to be set
+status_clr	Integer/Integer	Request status bits to be cleared
+cancel_clr	Integer/Integer	Request cancel bits to be cleared
+htb_sweep	Integer/Integer	Database current epoch count
+htb_sweeps	Integer/Integer	Database max epock count
+htb_period	Integer/Integer	Database period in bins
+htb_extension	Integer/Integer	Database extension in bins
+htb_cancel	Integer/Integer	Database cancel override bits
+htb_offset	Integer/Integer	Database offset in bins
+htb_tpb	Integer/Integer	Database analog ticks per bin
+htb_nchannels	Integer/Integer	Database number of channels
+htb_channel	Integer/Integer	Database first channel
+htb_type	Integer/Integer	Database type of data
+htb_tag	Integer/Integer	Database TAG
+htb_handle	Integer/Integer	Database EMM handle
+htb_speed	Integer/Integer	Database collected acquisition rate
+htb_speedunits	Integer/Integer	Database speed units
+htb_dirty	Integer/Integer	Database write to disk flag
+system	Float/Integer  	Request a TEMPO command
+systemf	Float/Integer  	Request a formatted TEMPO command
+tick	Integer/Integer	Current tick time in ticks
+time	Integer/Integer	Current tick time in milliseconds
+timeus	Integer/Integer	Current CPU 8254 clock
+mspertick	Integer/Integer	Milliseconds per analog tick
+mspercycle	Integer/Integer	Milliseconds per process cycle
+timeofday	Integer/Integer	Current time of day (in ms)
+day	Integer/Integer	Current day of month (1-12)
+dayofweek	Integer/Integer	Current day of week (0=SUN)
+month	Integer/Integer	Current month (1=JAN)
+year	Integer/Integer	Current year (1980-2099)
+atable	Integer/Integer	Get analog channel value
+ctable	Integer/Integer	Get counter channel value
+etable	Integer/Integer	Get event channel value
+atable_set	Integer/Integer	set analog channel value
+ctable_set	Integer/Integer	Set counter channel value
+etable_set	Integer/Integer	Set event channel value
+event_set	Integer/Integer	Set future event channel value
+event_get	Integer/Integer	Get future event channel value
+inp	Integer/Integer	Read byte from a port
+inpw	Integer/Integer	Read word from a port
+outp	Integer/Integer	Write byte to a port
+outpw	Integer/Integer	Write word to a port
+sound	Integer/Integer	Set kernel PCs speaker frequency
+send	Float/Integer  	Send string to COM port
+sendf	Float/Integer  	Send formatted string to COM port
+com_autocancel	Integer/Integer	Get/Set COMAUTOCANCEL setting
+com_count	Integer/Integer	Get number of received chars
+com_free_space	Integer/Integer	Get amount of free space in buffer
+com_peek	Integer/Integer	Look at next character
+com_get	Integer/Integer	Get next character
+com_getn	Integer/Integer	Get next number
+com_flush	Integer/Integer	Discard received characters
+com_span	Integer/Integer	Skip over received characters
+send2	Float/Integer  	Send string to COM2 port
+sendf2	Float/Integer  	Send formatted string to COM2 port
+com_autocancel2	Integer/Integer	Get/Set COMAUTOCANCEL setting
+com_count2	Integer/Integer	Get number of received chars
+com_free_space2	Integer/Integer	Get amount of free space in buffer
+com_peek2	Integer/Integer	Look at next character
+com_get2	Integer/Integer	Get next character
+com_getn2	Integer/Integer	Get next number
+com_flush2	Integer/Integer	Discard received characters
+com_span2	Integer/Integer	Skip over received characters
+sendb	Float/Integer  	Send strings to both COMs
+sendfb	Float/Integer  	Send formatted string to both COMs
+getPendingDBTriggers	Integer/Integer	Get number of pending triggers by DB
+getPendingTAGTriggers	Integer/Integer	Get number of pending triggers by TAG
+getProcessState	Integer/Integer	Get process information
+getSystemInfo	Integer/Integer	Get system information
+oCreate	Integer/Integer	Create animated object
+oDestroy	Integer/Integer	Destroy animated object
+oMove	Integer/Integer	Move animated object
+oSetAttribute	Integer/Integer	Set animated object attributes
+oSetGraph	Integer/Integer	Set animated graph attributes
+mouGetX	Integer/Integer	Get mouse X
+mouGetY	Integer/Integer	Get mouse Y
+mouGetButtons	Integer/Integer	Get mouse button state
+mouSetMickeys	Integer/Integer	Get mouse sensitivity
+mouSetXY	Integer/Integer	Set mouse position
+fabs	Float/Float    	Float absolute value
+sin	Float/Float    	sine in degrees
+cos	Float/Float    	cosine in degrees
+sinrad	Float/Float    	sine in radians
+cosrad	Float/Float    	cosine in radians
+deg2rad	Float/Float    	convert degrees to radians
+rad2deg	Float/Float    	convert radians to degrees
+sqrt	Float/Float    	square root
+round	Float/Float    	round to nearest integer
+ceil	Float/Float    	ceiling of a value
+floor	Float/Float    	floor of a value
+floatimport	Float/Float    	Coerce integer to float
+floatexport	Float/Integer  	Coerce float to integer
+floattest	Float/Integer  	Test if integer is IEEE float
+tio_fout	Integer/Integer	Set am9513 frequency generator
+tio_dig_mask	Integer/Integer	Set/Get TTL direction on PC-TI010
+tio_dig_get	Integer/Integer	Get TTL inputs on spike board
+tio_dig_set	Integer/Integer	Set TTL outputs on spike board
+dioSetMode	Integer/Integer	Set direction for 8255 port A, B & C
+dioGetA	Integer/Integer	Get 8255 port A
+dioGetB	Integer/Integer	Get 8255 port B
+dioGetC	Integer/Integer	Get 8255 port C
+dioSetA	Integer/Integer	Set 8255 port A
+dioSetB	Integer/Integer	Set 8255 port B
+dioSetC	Integer/Integer	Set 8255 port C
+dSend	Float/Integer  	Send string to RDX line
+dSendf	Float/Integer  	Send formatted string to RDX line
+dSend2	Float/Integer  	Send string to RDX line2
+dSendf2	Float/Integer  	Send formatted string to RDX line2
+dacGet	Integer/Integer	Get DAC value for a DAC channel
+dacSet	Integer/Integer	Set DAC value for a DAC channel
