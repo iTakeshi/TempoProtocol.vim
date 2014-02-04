@@ -1,3 +1,8 @@
+function! s:word_prefix(dict, keyword)
+  let l:len = strlen(a:keyword)
+  return strpart(a:dict.word, 0, l:len) ==# a:keyword
+endfunction
+
 function! neco_tempo#cache_candidates()
   let l:function_dict = globpath(&runtimepath, 'dict/TempoProtocol/functions.dict', 1)
   let s:candidates = []
@@ -16,6 +21,7 @@ function! neco_tempo#cache_candidates()
   endfor
 endfunction
 
-function! neco_tempo#gather_candidates()
-  return s:candidates
+function! neco_tempo#gather_candidates(cur_keyword_str)
+  let l:list = copy(s:candidates)
+  return filter(l:list, 's:word_prefix(v:val, a:cur_keyword_str)')
 endfunction
