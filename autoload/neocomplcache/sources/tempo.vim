@@ -9,7 +9,7 @@ function! s:source.initialize()
 endfunction
 
 function! s:source.get_complete_words(cur_keyword_pos, cur_keyword_str)
-  return neco_tempo#gather_candidates()
+  return neco_tempo#gather_candidates(a:cur_keyword_str)
 endfunction
 
 function! neocomplcache#sources#tempo#define()
