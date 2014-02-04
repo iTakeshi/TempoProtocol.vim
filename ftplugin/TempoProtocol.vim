@@ -11,11 +11,6 @@ setl tabstop=4
 setl softtabstop=4
 setl shiftwidth=4
 
-if !exists('g:neocomplete#sources#dictionary#dictionaries')
-  let g:neocomplete#sources#dictionary#dictionaries = {}
-endif
-let g:neocomplete#sources#dictionary#dictionaries.TempoProtocol = globpath(&runtimepath, 'dict/TempoProtocol/functions.dict', 1)
-
 if !exists('g:neocomplcache_dictionary_filetype_lists')
   let g:neocomplcache_dictionary_filetype_lists = {}
 endif
