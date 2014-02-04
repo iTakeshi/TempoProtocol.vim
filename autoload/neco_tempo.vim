@@ -16,6 +16,6 @@ function! neco_tempo#cache_candidates()
   endfor
 endfunction
 
-function! neco_tempo#gather_candidates(context)
+function! neco_tempo#gather_candidates()
   return s:candidates
 endfunction
