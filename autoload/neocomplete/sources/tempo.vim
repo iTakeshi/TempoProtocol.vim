@@ -10,8 +10,7 @@ function! s:source.hooks.on_init(context)
 endfunction
 
 function! s:source.gather_candidates(context)
-  echo neco_tempo#gather_candidates(a:context)
-  return neco_tempo#gather_candidates(a:context)
+  return neco_tempo#gather_candidates()
 endfunction
 
 function! neocomplete#sources#tempo#define()
