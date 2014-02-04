@@ -1,7 +1,7 @@
-function! neco_tempo#gather_candidates(context)
-  let s:function_dict = globpath(&runtimepath, 'dict/TempoProtocol/functions.dict', 1)
+function! neco_tempo#cache_candidates()
+  let l:function_dict = globpath(&runtimepath, 'dict/TempoProtocol/functions.dict', 1)
   let s:candidates = []
-  for line_str in readfile(s:function_dict)
+  for line_str in readfile(l:function_dict)
     let list = split(line_str, "\t", 1)
     if len(list) == 3
       let [func_name, arg_info, func_desc] = list
@@ -14,5 +14,8 @@ function! neco_tempo#gather_candidates(context)
     endif
     call add(s:candidates, s:candidate)
   endfor
+endfunction
+
+function! neco_tempo#gather_candidates(context)
   return s:candidates
 endfunction
