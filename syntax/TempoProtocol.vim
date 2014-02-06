@@ -65,7 +65,7 @@ syn keyword TempoProtocolBoolean true TRUE false FALSE
 syn match   TempoProtocolSemicolon /;/
 
 " Comment
-syn match   TempoProtocolComment /\*\_.*\*/
+syn region  TempoProtocolComment start=/\/\*/ end=/\*\// contains=TempoProtocolTodo
 syn match   TempoProtocolComment /\/\/.*$/ contains=TempoProtocolToDo
 
 " ToDo
