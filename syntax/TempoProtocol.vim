@@ -21,10 +21,10 @@ syn keyword TempoProtocolDeclarationInt      int      INT
 syn keyword TempoProtocolDeclarationFloat    float    FLOAT
 
 " Process
-syn keyword TempoProtocolProcessProcess process PROCESS           skipwhite nextgroup=TempoProtocolProcessName
-syn match   TempoProtocolProcessName    /[0-9A-Za-z]\+/ contained skipwhite nextgroup=TempoProtocolProcessEnabled,TempoProtocolProcessHide
-syn keyword TempoProtocolProcessEnabled enabled Enabled contained skipwhite nextgroup=TempoProtocolProcessHide
-syn keyword TempoProtocolProcessHide    hide    HIDE    contained
+syn keyword TempoProtocolProcessProcess process PROCESS            skipwhite nextgroup=TempoProtocolProcessName
+syn match   TempoProtocolProcessName    /[0-9A-Za-z_]\+/ contained skipwhite nextgroup=TempoProtocolProcessEnabled,TempoProtocolProcessHide
+syn keyword TempoProtocolProcessEnabled enabled Enabled  contained skipwhite nextgroup=TempoProtocolProcessHide
+syn keyword TempoProtocolProcessHide    hide    HIDE     contained
 syn keyword TempoProtocolProcessControl resume  RESUME
 syn keyword TempoProtocolProcessControl suspend SUSPEND
 syn keyword TempoProtocolProcessControl spawn   SPAWN
@@ -65,7 +65,7 @@ syn keyword TempoProtocolBoolean true TRUE false FALSE
 syn match   TempoProtocolSemicolon /;/
 
 " Comment
-syn match   TempoProtocolComment /\*\_.*\*/
+syn region  TempoProtocolComment start=/\/\*/ end=/\*\// contains=TempoProtocolTodo
 syn match   TempoProtocolComment /\/\/.*$/ contains=TempoProtocolToDo
 
 " ToDo
