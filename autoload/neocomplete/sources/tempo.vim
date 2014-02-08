@@ -1,9 +1,9 @@
 let s:source = {
-\   'name'      : 'tempo',
-\   'kind'      : 'keyword',
-\   'filetypes' : { 'TempoProtocol' : 1 },
-\   'hooks'     : {}
-\ }
+      \ 'name'      : 'tempo',
+      \ 'kind'      : 'keyword',
+      \ 'filetypes' : { 'TempoProtocol' : 1 },
+      \ 'hooks'     : {}
+      \ }
 
 function! s:source.hooks.on_init(context)
   call neco_tempo#cache_candidates()
