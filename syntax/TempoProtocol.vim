@@ -13,34 +13,34 @@ set cpo&vim
 syn match   TempoProtocolPreProc /#\%(include\|pragma\)/
 
 " Declaration
-syn keyword TempoProtocolDeclarationDeclare  declare  DECLARE  skipwhite nextgroup=TempoProtocolDeclarationHex,TempoProtocolDeclarationHide,TempoProtocolDeclarationConstant,TempoProtocolDeclarationInt,TempoProtocolDeclarationFloat
-syn keyword TempoProtocolDeclarationHex      hex      HEX      skipwhite nextgroup=TempoProtocolDeclarationHide,TempoProtocolDeclarationConstant,TempoProtocolDeclarationInt,TempoProtocolDeclarationFloat
-syn keyword TempoProtocolDeclarationHide     hide     HIDE     skipwhite nextgroup=TempoProtocolDeclarationConstant,TempoProtocolDeclarationInt,TempoProtocolDeclarationFloat
-syn keyword TempoProtocolDeclarationConstant constant CONSTANT skipwhite nextgroup=TempoProtocolDeclarationInt,TempoProtocolDeclarationFloat
-syn keyword TempoProtocolDeclarationInt      int      INT
-syn keyword TempoProtocolDeclarationFloat    float    FLOAT
+syn keyword TempoProtocolDeclarationDeclare  declare  skipwhite nextgroup=TempoProtocolDeclarationHex,TempoProtocolDeclarationHide,TempoProtocolDeclarationConstant,TempoProtocolDeclarationInt,TempoProtocolDeclarationFloat
+syn keyword TempoProtocolDeclarationHex      hex      skipwhite nextgroup=TempoProtocolDeclarationHide,TempoProtocolDeclarationConstant,TempoProtocolDeclarationInt,TempoProtocolDeclarationFloat
+syn keyword TempoProtocolDeclarationHide     hide     skipwhite nextgroup=TempoProtocolDeclarationConstant,TempoProtocolDeclarationInt,TempoProtocolDeclarationFloat
+syn keyword TempoProtocolDeclarationConstant constant skipwhite nextgroup=TempoProtocolDeclarationInt,TempoProtocolDeclarationFloat
+syn keyword TempoProtocolDeclarationInt      int
+syn keyword TempoProtocolDeclarationFloat    float
 
 " Process
-syn keyword TempoProtocolProcessProcess process PROCESS            skipwhite nextgroup=TempoProtocolProcessName
+syn keyword TempoProtocolProcessProcess process                    skipwhite nextgroup=TempoProtocolProcessName fold
 syn match   TempoProtocolProcessName    /[0-9A-Za-z_]\+/ contained skipwhite nextgroup=TempoProtocolProcessEnabled,TempoProtocolProcessHide
-syn keyword TempoProtocolProcessEnabled enabled Enabled  contained skipwhite nextgroup=TempoProtocolProcessHide
-syn keyword TempoProtocolProcessHide    hide    HIDE     contained
-syn keyword TempoProtocolProcessControl resume  RESUME
-syn keyword TempoProtocolProcessControl suspend SUSPEND
-syn keyword TempoProtocolProcessControl spawn   SPAWN
+syn keyword TempoProtocolProcessEnabled enabled          contained skipwhite nextgroup=TempoProtocolProcessHide
+syn keyword TempoProtocolProcessHide    hide             contained
+syn keyword TempoProtocolProcessControl resume
+syn keyword TempoProtocolProcessControl suspend
+syn keyword TempoProtocolProcessControl spawn
 
 " Flow Control
-syn keyword TempoProtocolFlowControl if    IF
-syn keyword TempoProtocolFlowControl while WHILE
+syn keyword TempoProtocolFlowControl if
+syn keyword TempoProtocolFlowControl while
 
 " Wait
-syn keyword TempoProtocolWait waitforprocess WAITFORPROCESS
-syn keyword TempoProtocolWait nexttick       NEXTTICK
-syn keyword TempoProtocolWait wait           WAIT
-syn keyword TempoProtocolWait wson           WSON
-syn keyword TempoProtocolWait wsof           WSOF
-syn keyword TempoProtocolWait wcon           WCON
-syn keyword TempoProtocolWait wcof           WCOF
+syn keyword TempoProtocolWait waitforprocess
+syn keyword TempoProtocolWait nexttick
+syn keyword TempoProtocolWait wait
+syn keyword TempoProtocolWait wson
+syn keyword TempoProtocolWait wsof
+syn keyword TempoProtocolWait wcon
+syn keyword TempoProtocolWait wcof
 
 " Numbers
 syn match   TempoProtocolNumber /\<[-+]\?\%(0\|[1-9][0-9]*\|0[xX][0-9A-Fa-f]\+\|0[0-7]\+\)N\?\>/
@@ -59,7 +59,7 @@ syn match   TempoProtocolCharacterSequence /\\\%([1-9][0-9]\?\|1[0-9]\{2}\|2[0-4
 syn match   TempoProtocolOperator /\%([\+\-\*\/%|&~\<\>=]\|!=\)/
 
 " Boolean
-syn keyword TempoProtocolBoolean true TRUE false FALSE
+syn keyword TempoProtocolBoolean true false
 
 " Semicolon
 syn match   TempoProtocolSemicolon /;/
