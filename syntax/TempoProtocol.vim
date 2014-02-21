@@ -30,7 +30,7 @@ syn keyword TempoProtocolProcessControl suspend
 syn keyword TempoProtocolProcessControl spawn
 
 " Flow Control
-syn keyword TempoProtocolFlowControl if
+syn keyword TempoProtocolFlowControl if else
 syn keyword TempoProtocolFlowControl while
 
 " Wait
