@@ -11,5 +11,7 @@ setl tabstop=4
 setl softtabstop=4
 setl shiftwidth=4
 
+setl foldmethod=expr foldexpr=fold_tempo#FoldExpression(v:lnum)
+
 let &cpo = s:save_cpo
 unlet s:save_cpo
