@@ -28,6 +28,7 @@ syn keyword TempoProtocolProcessHide    hide             contained
 syn keyword TempoProtocolProcessControl resume
 syn keyword TempoProtocolProcessControl suspend
 syn keyword TempoProtocolProcessControl spawn
+syn keyword TempoProtocolProcessControl spawnwait
 
 " Flow Control
 syn keyword TempoProtocolFlowControl if else
